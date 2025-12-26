@@ -6,34 +6,23 @@ import string
 code = '''
 
 import java.util.Scanner;
-import java.text.DecimalFormat;
 
-public class ex31 {
+public class Main {
 public static void main(String[] args) {
-        
+
 Scanner sc = new Scanner(System.in);
-int U = sc.nextInt();
- double bill;
-if (U <= 25) {
-bill = U * 1.25;
-     }
- else if (U <= 50) {
-     bill = U * 1.45;
-  }
-  else if (U <= 75) {
- bill = U * 1.65;
-       }
-  else if (U <= 95) {
- bill = U * 1.95;
-      }
-  else {
-  bill = U * 2.00;
-      }
- DecimalFormat dc=new DecimalFormat("0.0#");
-   System.out.printf("$ "+dc.format(bill));
-        
-        sc.close();
-    }
+Double N = sc.nextDouble();
+
+if (N > 0) {
+System.out.println("positive");
+} else if (N < 0) {
+System.out.println("negative");
+} else {
+System.out.println("neutral");
+}
+
+sc.close();
+}
 }
 
 
