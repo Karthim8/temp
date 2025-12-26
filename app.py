@@ -4,8 +4,39 @@ import random
 import string
 
 code = '''
+import java.util.Scanner;
 
-import java.util.*;
+public class Main {
+public static void main(String[] args) {
+
+Scanner sc = new Scanner(System.in);
+
+int K = sc.nextInt();
+
+if (K <= 5) {
+System.out.println("$1");
+}
+else if (K <= 10) {
+System.out.println("$2");
+}
+else if (K <= 30) {
+System.out.println("$5");
+}
+else if (K <= 50) {
+System.out.println("$8");
+}
+else if (K <= 80) {
+System.out.println("$15");
+}
+else {
+System.out.println("$30");
+}
+
+sc.close();
+}
+}
+
+
 '''
 
 print("Place cursor in editor. Typing starts in 7 seconds...")
