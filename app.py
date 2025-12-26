@@ -7,26 +7,40 @@ code = '''
 
 import java.util.Scanner;
 
-public class PowerOfNumber {
-public static void main(String[] args) {
-Scanner sc = new Scanner(System.in);
+public class q39{
+public static void main(String[] args){
+Scanner sc=new Scanner(System.in);
 
-String input = sc.nextLine();
-String[] values = input.split(",");
+int N=sc.nextInt();
+int original=N;
+int temp=N;
+int digits=0;
+int sum=0;
 
-int X = Integer.parseInt(values[0]);
-int Y = Integer.parseInt(values[1]);
-
-long result = 1;
-
-for(int i = 1; i <= Y; i++) {
-result = result * X;
+while(temp>0){
+digits++;
+temp=temp/10;
 }
 
-System.out.println(result);
-sc.close();
+temp=N;
+while(temp>0){
+int digit=temp%10;
+int power=1;
+for(int i=1;i<=digits;i++){
+power=power*digit;
+}
+sum=sum+power;
+temp=temp/10;
+}
+
+if(sum==original){
+System.out.println("true");
+}else{
+System.out.println("false");
 }
 }
+}
+
 
 '''
 
