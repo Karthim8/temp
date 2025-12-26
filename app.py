@@ -7,39 +7,26 @@ code = '''
 
 import java.util.Scanner;
 
-public class q39{
+public class GCD{
 public static void main(String[] args){
 Scanner sc=new Scanner(System.in);
 
-int N=sc.nextInt();
-int original=N;
-int temp=N;
-int digits=0;
-int sum=0;
+String input=sc.nextLine();
+String[] values=input.split(",");
 
-while(temp>0){
-digits++;
-temp=temp/10;
-}
+int N1=Integer.parseInt(values[0].trim());
+int N2=Integer.parseInt(values[1].trim());
 
-temp=N;
-while(temp>0){
-int digit=temp%10;
-int power=1;
-for(int i=1;i<=digits;i++){
-power=power*digit;
-}
-sum=sum+power;
-temp=temp/10;
+while(N2!=0){
+int temp=N2;
+N2=N1%N2;
+N1=temp;
 }
 
-if(sum==original){
-System.out.println("true");
-}else{
-System.out.println("false");
+System.out.println(N1);
 }
 }
-}
+
 
 
 '''
