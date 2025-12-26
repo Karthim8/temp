@@ -4,38 +4,25 @@ import random
 import string
 
 code = '''
-
-
 import java.util.Scanner;
 
-public class ex34 {
+public class Main {
 public static void main(String[] args) {
- Scanner sc = new Scanner(System.in);
- int N = sc.nextInt();
- if(N==500){
- System.out.print("1 2 3 ... 500");
- }
-  else if(N==1000000){
-System.out.print("1 2 3 ... 1000000");
-  }
-        
-else{
- StringBuilder sb = new StringBuilder();
-    for (int i = 1; i <= N; i++) {
- sb.append(i);
- if (i < N) {
-  sb.append(" ");
-            }
-        }
-        
- System.out.print(sb.toString());
- sc.close();
 
+Scanner sc = new Scanner(System.in);
+long N = sc.nextLong();
+
+long sum = 0;
+
+while (N > 0) {
+sum += N % 10;
+N = N / 10;
 }
 
-    }
+System.out.println(sum);
+sc.close();
 }
-
+}
 
 '''
 
