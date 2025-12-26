@@ -11,31 +11,27 @@ public static void main(String[] args) {
 
 Scanner sc = new Scanner(System.in);
 
-int K = sc.nextInt();
+String I = sc.nextLine().trim();
 
-if (K <= 5) {
-System.out.println("$1");
+if (I.equals("A")) {
+System.out.println("5000");
 }
-else if (K <= 10) {
-System.out.println("$2");
+else if (I.equals("B")) {
+System.out.println("4500");
 }
-else if (K <= 30) {
-System.out.println("$5");
+else if (I.equals("C")) {
+System.out.println("3000");
 }
-else if (K <= 50) {
-System.out.println("$8");
+else if (I.equals("D")) {
+System.out.println("1500");
 }
-else if (K <= 80) {
-System.out.println("$15");
-}
-else {
-System.out.println("$30");
+else if (I.equals("E")) {
+System.out.println("500");
 }
 
 sc.close();
 }
 }
-
 
 '''
 
