@@ -5,7 +5,7 @@ import string
 
 code = '''
 
-
+import java.util.*;
 '''
 
 print("Place cursor in editor. Typing starts in 7 seconds...")
