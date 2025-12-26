@@ -7,37 +7,26 @@ code = '''
 
 import java.util.Scanner;
 
-public class ex37 {
-    public static void main(String[] args) {
-     Scanner sc = new Scanner(System.in);
-int N = sc.nextInt();
-        long a = 0, b = 1;
-        
-        if(N==25){
-            
-            System.out.print("0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597 2584 4181 6765 10946 17711 28657 46368 75025");
-        }
-        
-  else{      
-    if(N>=1){
-        System.out.print(a);
-    }    
-    if(N>=2){
-        System.out.print(" "+b);
-    }
-        
- for (int i = 3; i <= N; i++) {
-                long c = a + b;
-System.out.print(" "+c);
-a=b;
-b=c;
-}
-  } 
-        
-        sc.close();
-    }
+public class PowerOfNumber {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+
+String input = sc.nextLine();
+String[] values = input.split(",");
+
+int X = Integer.parseInt(values[0]);
+int Y = Integer.parseInt(values[1]);
+
+long result = 1;
+
+for(int i = 1; i <= Y; i++) {
+result = result * X;
 }
 
+System.out.println(result);
+sc.close();
+}
+}
 
 '''
 
