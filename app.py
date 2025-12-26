@@ -5,21 +5,21 @@ import string
 
 code = '''
 import java.util.Scanner;
+import java.math.BigInteger;
 
 public class Main {
 public static void main(String[] args) {
 
 Scanner sc = new Scanner(System.in);
-long N = sc.nextLong();
+int N = sc.nextInt();
 
-long sum = 0;
+BigInteger fact = BigInteger.ONE;
 
-while (N > 0) {
-sum += N % 10;
-N = N / 10;
+for (int i = 1; i <= N; i++) {
+fact = fact.multiply(BigInteger.valueOf(i));
 }
 
-System.out.println(sum);
+System.out.println(fact);
 sc.close();
 }
 }
